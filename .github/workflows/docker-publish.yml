@@ -32,8 +32,8 @@ jobs:
         context: .
         file: ./Dockerfile
         push: ${{ github.event_name == 'push' }}
-        tags: rezwr01/first_ml_docker:latest
+        tags: rezwr01/first_ml_docker
 
     - name: Run Docker container
       run: |
-        docker run --name ml_model rezwr01/first_ml_docker:latest
+        docker run --name ml_model rezwr01/first_ml_docker
