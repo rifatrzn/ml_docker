@@ -29,10 +29,10 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
-        context: .
-        file: ./Dockerfile
+        context: ./docker_ml_model
+        file: ./docker_ml_model/Dockerfile
         push: ${{ github.event_name == 'push' }}
-        tags: rezwr01/first_ml_docker
+        tags: rezwr01/first_ml_docker:latest
 
     - name: Run Docker container
       run: |
