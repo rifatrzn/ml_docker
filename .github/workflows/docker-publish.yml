@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./Dockerfile
+        file: ./docker_ml_model/Dockerfile
         push: ${{ github.event_name == 'push' }}
         tags: rezwr01/first_ml_docker:latest
 
